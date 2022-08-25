@@ -1,0 +1,68 @@
+:root
+{
+    --fuente: 'Roboto', sans-serif;
+    --fondo: #f4a261;
+}
+
+/** Estilos generales en el documento html */
+html {
+    /** Definimos modelo de cajas */
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: var(--fondo);
+    line-height: 1.5; /** Interlineado */
+}
+
+header
+{
+    display: flex; /** Activamos flex */
+    justify-content: center; /** Centramos el componente */
+    margin: 2rem 0;
+}
+
+h1
+{
+    font-size: 3.2rem;
+}
+
+h2
+{
+    font-size: 2.6rem;
+    text-align: center;
+}
+
+h3
+{
+    font-size: 1.6rem;
+}
+
+p
+{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.span-header
+{
+    font-size: 1.0rem;
+}
+
+div
+{
+    margin:0px 50px;
+}
+
+ul, li
+{
+    font-size: 1.2rem;
+    text-align: center;
+    justify-content:center;
+}
+
+li
+{
+    list-style: none;
+}

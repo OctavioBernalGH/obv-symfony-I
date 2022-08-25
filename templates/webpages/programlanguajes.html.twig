@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+
+<h2>Lenguajes de programación más utilizados en Aug 2022:</h2>
+
+{# Se crea un listado desordenado mediante UL. #}
+<ul>
+    {# Se crea un bucle FOR para recorrer el array enviado en la función homepage. #}
+    {% for lenguajes in lenguajesProgram %}
+        <li>
+            {# Se imprimen los diferentes lenguajes de programación.#}
+            {{ lenguajes.idioma | upper }} - {{ lenguajes.uso }}
+        </li>
+        {# Fin del bucle FOR. #}
+    {% endfor %}
+</ul>
+
+{% endblock %}
