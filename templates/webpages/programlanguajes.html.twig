@@ -2,20 +2,40 @@
 
 {% block body %}
 
+    <div class="container">
 
+        <h2 class="titulo-h2">Habilidades de Desarrollo</h2>
 
-<h2>Lenguajes de programación más utilizados en Aug 2022:</h2>
+        <div class="grid-container">
 
-{# Se crea un listado desordenado mediante UL. #}
-<ul>
-    {# Se crea un bucle FOR para recorrer el array enviado en la función homepage. #}
-    {% for lenguajes in lenguajesProgram %}
-        <li>
-            {# Se imprimen los diferentes lenguajes de programación.#}
-            {{ lenguajes.idioma | upper }} - {{ lenguajes.uso }}
-        </li>
-        {# Fin del bucle FOR. #}
-    {% endfor %}
-</ul>
+            {% for lenguaje in lenguaje %}
+                <div class="card" style="width: 14rem;">
+                    <img src="{{ lenguaje.imagen }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <hr>
+                        <p class="card-text"> {{ lenguaje.nombre }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+        <!-- frameworks -->
+
+        <h2 class="titulo-h2">Librerias y Frameworks</h2>
+
+        <div class="grid-container">
+
+            {% for framework in frameworks %}
+                <div class="card" style="width: 14rem;">
+                    <img src="{{ framework.imagen }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <hr>
+                        <p class="card-text"> {{ framework.nombre }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
 
 {% endblock %}

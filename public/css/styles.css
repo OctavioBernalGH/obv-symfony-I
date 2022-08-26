@@ -1,68 +1,207 @@
 :root
 {
-    --fuente: 'Roboto', sans-serif;
-    --fondo: #f4a261;
-}
-
-/** Estilos generales en el documento html */
-html {
-    /** Definimos modelo de cajas */
-    box-sizing: border-box;
+    --Blanco: #FFF;
+    --BlancoPalido: #EEEEEE;
+    --BarraNavegacion: #222831;
+    --ColorHeader: #393E46;
+    --ColorFuente: #00ADB5;
+    --Fuente: 'Roboto', sans-serif;
 }
 
 body
 {
-    background-color: var(--fondo);
-    line-height: 1.5; /** Interlineado */
+    background-color: var(--BlancoPalido);
+    font-family: var(--Fuente);
 }
+
+
+/**
+    BARRA DE NAVEGACIÓN Y COMPONENTES
+ */
+
+.navegacion-superior
+{
+    /* Habilitamos el display flex */
+    display: flex;
+    /* Se elije como se verá mediante justify-content */
+    justify-content: center;
+    /** Menú ventrado formato columna */
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--BarraNavegacion);
+    /** Padding superior e inferior de la navbar */
+    padding: 10px 0px;
+
+}
+
+.navegacion-superior a
+{
+    color: var(--ColorFuente);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navegacion-superior a:hover
+{
+    color: var(--BlancoPalido);
+    -webkit-box-shadow: -200px 17px 36px -1px rgba(0,-50,181,1);
+    -moz-box-shadow: -150px 17px 36px -1px rgba(0,-50,181,1);
+    box-shadow: 0px 0px 36px -1px rgba(0,150,181,1);
+}
+
+.navegacion-superior svg
+{
+    color: var(--BlancoPalido);
+}
+
+/**
+    HEADER Y COMPONENTES
+ */
 
 header
 {
-    display: flex; /** Activamos flex */
-    justify-content: center; /** Centramos el componente */
-    margin: 2rem 0;
+    margin-top: 0px;
+    width: 100%;
+    height: 14rem;
+    background-color: var(--ColorHeader);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
 }
 
-h1
-{
-    font-size: 3.2rem;
-}
-
-h2
-{
-    font-size: 2.6rem;
+.titulo-principal{
     text-align: center;
+    color: var(--BlancoPalido);
+
 }
 
-h3
+.container
 {
-    font-size: 1.6rem;
-}
-
-p
-{
+    padding: 2rem;
+    width: 1100px;
     font-size: 1.2rem;
+    /** Sombreado de la caja principal */
+    -webkit-box-shadow: 0px 17px 36px -1px rgba(0,173,181,0.82);
+    -moz-box-shadow: 0px 17px 36px -1px rgba(0,173,181,0.82);
+    box-shadow: 0px 17px 36px -1px rgba(0,173,181,0.82);
+}
+
+.container p
+{
+    margin: 1.4rem;
     text-align: justify;
+
 }
 
-.span-header
+.container H4
 {
-    font-size: 1.0rem;
+    margin-left: 0px;
 }
 
-div
+.container div .imagen-div
 {
-    margin:0px 50px;
+    display: flex;
 }
 
-ul, li
-{
-    font-size: 1.2rem;
-    text-align: center;
-    justify-content:center;
-}
-
-li
+.container li
 {
     list-style: none;
+    margin: 5px;
 }
+
+
+.titulo-h2
+{
+   margin-bottom: 3rem;
+}
+
+
+.grid-container .card
+{
+    text-transform: capitalize;
+    justify-self: center;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+}
+
+.grid-container .card img
+{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 10rem;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+}
+
+.grid-container .card .card-body{
+    width: 100%;
+    background-color: var(--ColorHeader);
+}
+
+.grid-container .card .card-body p
+{
+    color: var(--ColorFuente);
+    font-weight: bold;
+    text-align: center;
+}
+
+.grid-container .card:hover
+{
+    background-color: yellow;
+    -webkit-box-shadow: -200px 17px 36px -1px rgba(0,-50,181,1);
+    -moz-box-shadow: -150px 17px 36px -1px rgba(0,-50,181,1);
+    box-shadow: 0px 0px 36px -1px rgba(0,150,181,1);
+}
+
+.grid-container .card .card-body p:hover
+{
+    cursor: pointer;
+    color: var(--Blanco);
+}
+
+@media (min-width: 768px) {
+
+        .navegacion-superior{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        /** El botón vuelve a su tamaño */
+        .boton{
+            width: auto;
+        }
+        .stack{
+            display: grid;
+            /** Repite 1fr tres veces = tres columnas */
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 5rem;
+            text-align: justify
+        }
+        .sombra p{
+            margin: 20px;
+            text-align: justify;
+            font-size: 1.2em;
+        }
+    }
+    .grid-container
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+
+@media (min-width: 1000px) {
+    .grid-container
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 2rem;
+        margin-bottom: 3rem;
+    }
+}
+

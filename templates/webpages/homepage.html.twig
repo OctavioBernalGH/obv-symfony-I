@@ -18,29 +18,42 @@
        {{ dump() }}
     #}
 
-    <div>
+    <div class="container">
+
         <p>
-            Symfony es un framework diseñado para desarrollar aplicaciones web basado en el patrón Modelo Vista Controlador.
-            Para empezar, separa la lógica de negocio, la lógica de servidor y la presentación de la aplicación web.
-            Proporciona varias herramientas y clases encaminadas a reducir el tiempo de desarrollo de una aplicación web
-            compleja. Además, automatiza las tareas más comunes, permitiendo al desarrollador dedicarse por completo a los
-            aspectos específicos de cada aplicación.
-
-            Symfony está desarrollado completamente en PHP 5.3. (GiLmEr Kbro) Es compatible con la mayoría de gestores de
-            bases de datos, como MySQL, PostgreSQL, Oracle y Microsoft SQL Server. Se puede ejecutar tanto en plataformas
-            *nix (Unix, Linux, etc.) como en plataformas Windows.
+            Me llamo Octavio, tengo 29 años, soy Técnico Superior en Informática y Telecomunicaciones y también Técnico
+            Superior en Automatización y Robótica Industrial.
         </p>
+
+        <p>
+            Durante estos años he estado desarrollando mi carrera profesional en el sector industrial, realizando
+            trabajos de electromecánico y/o maquinista industrial dirigiendo líneas de producción, controlando la
+            productividad y eficiencia durante la jornada y verificando el cumplimiento de los estándares de calidad
+            exigidos.
+        </p>
+
+        <p>
+            Recientemente, decidí cambiar de sector y elegí el de la programación, sector en el cual me siento cómodo
+            aprendiendo y creciendo profesionalmente y personalmente. Actualmente estoy trabajando como Junior Developer
+            en RPA y estudiando de forma constante nuevas tecnologías como Symfony, Twig y otras.
+        </p>
+
+        <ul>
+            <h4>Mis puntos fuertes:</h4>
+            <li>🔰 Compañerismo.</li>
+            <li>🔰 Actitud.</li>
+            <li>🔰 Autoexigencia.</li>
+        </ul>
+
+        <ul>
+            <h4>Mis puntos débiles:</h4>
+            <li>❌ Autoexigencia.</li>
+            <li>❌ Competitividad (conmigo mismo).</li>
+            <li>❌ Perfeccionismo.</li>
+        </ul>
+
+
     </div>
-
-    <h2>Versiones Symfony + PHP</h2>
-
-    <ul>
-        {% for version in versionado %}
-            <li>
-                Symfony {{ version.versionSymfony }} - PHP: {{ version.versionPHP }} - Año: {{ version.ano }}
-            </li>
-        {% endfor %}
-    </ul>
 
     {# Fin del cuerpo. #}
 {% endblock %}
