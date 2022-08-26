@@ -88,4 +88,15 @@ class UsuarioController extends AbstractController
         ]);
     }
 
+    /**
+     * PÁGINA DE CONTACTO
+     */
+    #[Route('/contacto', name: 'app_contacto')]
+    public function contacto()
+    {
+        return $this->render('webpages/contacto.html.twig', [
+
+        ]);
+    }
+
 }
